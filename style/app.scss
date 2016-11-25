@@ -1,0 +1,60 @@
+html, body {
+    margin:1em;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "helvetica";
+    background: #F1F1F1;
+    text-align: center;
+
+}
+h1{
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #7f8894;
+    text-align: center;
+
+}
+img {
+    margin: auto;
+}
+
+$primary-color : #FFFFFF;
+$accent-color : #ff6c73;
+$transition-duration: 0.3s;
+
+.wrap {
+    margin : 0 auto;
+    text-align: center;
+}
+button {
+    padding: 1em;
+    margin: 0.5em;
+    font-size: 1.4em;
+    background: $primary-color;
+    color: $accent-color;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: $transition-duration;
+
+
+    &:focus {
+        outline: none;
+        background: $primary-color;
+        color: $accent-color;
+    }
+}
+@media (min-width: 600px) {
+    button:hover {
+        background: $accent-color;
+        color: $primary-color;
+
+    }
+}
+
+.active {
+    background: $accent-color !important;
+    color: $primary-color !important;
+    transition: $transition-duration;
+}

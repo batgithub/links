@@ -1,0 +1,55 @@
+$fontTitle: 'Montserat', sans-serif;
+$fontText: 'Lato', sans-serif;
+$fontSizeDflt: 14px;
+$fontXXL:      3.5rem;
+$fontXL:       3rem;
+$fontL:        2rem;
+$fontM:        1.5rem;
+$fontS:        0.75rem;
+$fontXS:       0.5rem;
+// Base 16px
+// factor-scale : 1.333
+// TYPOGRAPHY
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+body {
+  line-height: 1.68;
+  font-size: 1em;
+  font-family: $fontText;
+}
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.55em;
+  line-height: 1.2;
+  font-family: $fontTitle;
+  color: $gris-jungle;
+  font-weight: bold;
+}
+p {   margin-bottom: 1.5em;  margin-top: 0;}
+h1 {  margin-top: 0;  font-size: 2.7625em;  }
+h2 {font-size: 2.0731em;}
+h3 {font-size: 1.777em; line-height: 1.45;}
+h4 {font-size: 1.166em; line-height: 1.40;}
+.subtitle {
+    font-size: 1.34em;
+    color: $gris-roger;
+}
+@media (min-width: 640px) {
+    html {
+        font-size: 16px;
+    }
+    h1 {  margin-top: 0;  font-size: 3.157em;  }
+    h2 {font-size: 2.369em;}
+    h3 {font-size: 1.777em; line-height: 1.45;}
+    h4 {font-size: 1.333em; line-height: 1.40;}
+}
+li {
+    margin-left: 30px;
+    list-style-type: decimal;
+}

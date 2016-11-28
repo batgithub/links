@@ -1,31 +1,52 @@
-function loader() {
-    $("button").each(
-        function(){
-            var file = $(this).data('file');
-            var audio = '<audio preload="auto" id="'+file +'"><source src="audio/'+ file +'.mp3"><span>'+ +'</span></audio>';
-            var dure = '<span>'+ $('#'+ file)+'</span>';
+function $(id) {
+    return document.getElementById(id)
+}
 
-            var b = $('#'+ file);
+function removeAllChild(node){
+    var myNode = document.getElementById(node);
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+    }
+}
+function getDomain(url) {
+   return url.match(/:\/\/(.[^/]+)/)[1];
+}
 
-            $(this).append(audio);
-        }
 
-    )
+function getFavicoUrl(url) {
+    var url = url
+    var search = "https://www.google.com/s2/favicons?domain="
+    var domain = getDomain(url)
+    var favIcoUrl = search+domain
+
+    return favIcoUrl
+
 }
 
 
 
-function playSound(id) {
+for (var link in links) {
 
-    var audioClick = $('#'+ id)[0];
-    var duration = (audioClick.duration)*1000;
+    var nameItem = links[link][0]
+    var linkItem = links[link][1]
+    var favicoItem = getFavicoUrl(linkItem)
 
 
-    audioClick.play();
-    audioClick.onplaying=function(){
-        $(audioClick).parent().addClass( "active" );
-    };
+    var newLink = document.createElement('a');
+    newLink.setAttribute('class', 'link');
+    newLink.setAttribute('href', linkItem);
 
-    setTimeout(function(){ $(audioClick).parent().removeClass( "active" );}, duration);
+
+
+
+
+    newLink.innerHTML = '\
+        <img src="'+favicoItem+'" alt=""><div class="link-infos" style=""> <div class="link-name">'+nameItem+'</div>\
+        <div class="link-url">'+linkItem+'</div></div>\
+        '
+
+
+
+    $("wrap").appendChild(newLink);
 
 }

@@ -1,5 +1,6 @@
-var links = {
-    "google":["google","https://docs.google.com/document/d/1mIQ_DYmhqnJk0AvS3sOvZxqgPgHuwXarTPw-ElyLSY4/edit?ts=57629e88"],
-    "unsplash":["unsplash","https://unsplash.com/"],
-    "morning":["morning","https://morning.com/"]
-};
+var links = [
+    {name: "unsplash", url:"https://unsplash.com/", cat:"cat 1"},
+    {name: "morning", url:"https://morning.com/", cat:"cat 2"},
+    {name: "oez", url:"https://telecharger-videos-youtube.com/", cat:"cat 2"},
+    {name: "principlerepo", url:"http://principlerepo.com/", cat:"cat 8"}
+]
